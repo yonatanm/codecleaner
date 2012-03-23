@@ -1,58 +1,57 @@
 <?xml version="1.0"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.outbrain</groupId>
-	<artifactId>codecleaner-maven-plugin</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
-	<packaging>maven-plugin</packaging>
-	<name>Codecleaner Maven Plugin</name>
-	<description></description>
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-			<distribution>repo</distribution>
-			<comments>A business-friendly OSS license</comments>
-		</license>
-	</licenses>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>com.outbrain</groupId>
+ <artifactId>codecleaner-maven-plugin</artifactId>
+ <version>1.0.2-SNAPSHOT</version>
+ <packaging>maven-plugin</packaging>
+ <name>Codecleaner Maven Plugin</name>
+ <description></description>
+ <licenses>
+  <license>
+   <name>Apache License, Version 2.0</name>
+   <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+   <distribution>repo</distribution>
+   <comments>A business-friendly OSS license</comments>
+  </license>
+ </licenses>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.maven</groupId>
-			<artifactId>maven-plugin-api</artifactId>
-			<version>2.0</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>1.2</version>
-		</dependency>
-	</dependencies>
+ <dependencies>
+  <dependency>
+   <groupId>org.apache.maven</groupId>
+   <artifactId>maven-plugin-api</artifactId>
+   <version>2.0</version>
+  </dependency>
+  <dependency>
+   <groupId>commons-io</groupId>
+   <artifactId>commons-io</artifactId>
+   <version>1.2</version>
+  </dependency>
+ </dependencies>
 
-	<developers>
-		<developer>
-			<id>malyvelky</id>
-			<name>Yonatran Maman</name>
-			<email>yonatanm@gmail.com</email>
-		</developer>
-	</developers>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-plugin-plugin</artifactId>
-				<version>2.9</version>
-				<executions>
-					<execution>
-						<id>generated-helpmojo</id>
-						<goals>
-							<goal>helpmojo</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+ <developers>
+  <developer>
+   <id>malyvelky</id>
+   <name>Yonatran Maman</name>
+   <email>yonatanm@gmail.com</email>
+  </developer>
+ </developers>
+ <build>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-plugin-plugin</artifactId>
+    <version>2.9</version>
+    <executions>
+     <execution>
+      <id>generated-helpmojo</id>
+      <goals>
+       <goal>helpmojo</goal>
+      </goals>
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
+ </build>
 </project>
