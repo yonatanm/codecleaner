@@ -18,34 +18,32 @@
 #### in your main pom.xm file add:
 
     <plugins>
+        <plugin>
+      <groupId>com.outbrain</groupId>
+      <artifactId>codecleaner-maven-plugin</artifactId>
+      <version>1.0.2</version>
+      <configuration>
+        <corePrefsFile>devtools/eclipse/settings/org.eclipse.jdt.core.prefs</corePrefsFile>
+        <uiPrefsFile>devtools/eclipse/settings/org.eclipse.jdt.ui.prefs</uiPrefsFile>
+        <validationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.validation.prefs</validationPrefsFile>
+        <htmlValidationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.html.core.prefs</htmlValidationPrefsFile>
+        <jspValidationPrefsFile>devtools/eclipse/settings/org.eclipse.jst.jsp.core.prefs</jspValidationPrefsFile>
+        <findbugsFile>devtools/eclipse/settings/.fbprefs</findbugsFile>
+        <pmdFileName>devtools/eclipse/settings/.pmd</pmdFileName>
+        <pmdRuleFileName>devtools/eclipse/settings/.ruleset</pmdRuleFileName>
+      </configuration>
+    </plugin>
       ....
-      <plugin>
-        <groupId>com.outbrain</groupId>
-        <artifactId>codecleaner-maven-plugin</artifactId>
-        <version>1.0.2</version>
-        <configuration>
-          <corePrefsFile>devtools/eclipse/settings/org.eclipse.jdt.core.prefs</corePrefsFile>
-          <uiPrefsFile>devtools/eclipse/settings/org.eclipse.jdt.ui.prefs</uiPrefsFile>
-          <validationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.validation.prefs</validationPrefsFile>
-          <htmlValidationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.html.core.prefs</htmlValidationPrefsFile>
-          <jspValidationPrefsFile>devtools/eclipse/settings/org.eclipse.jst.jsp.core.prefs</jspValidationPrefsFile>
-          <findbugsFile>devtools/eclipse/settings/.fbprefs</findbugsFile>
-          <pmdFileName>devtools/eclipse/settings/.pmd</pmdFileName>
-          <pmdRuleFileName>devtools/eclipse/settings/.ruleset</pmdRuleFileName>
-        </configuration>
-      </plugin>
-        ....
-    </plugins>
+  </plugins>    
 
 #### and run
 
-- set formatter, save action and code cleanup settings run:
+- set formatter, save action and code cleanup settings:
+
     $ mvn com.outbrain:codecleaner-maven-plugin:style
 
-- set compiler error/warning level:
     $ mvn com.outbrain:codecleaner-maven-plugin:compiler
 
-- set general/JSP/XML/XSD/HTML validation:
     $ mvn com.outbrain:codecleaner-maven-plugin:validation
 
 
