@@ -41,7 +41,6 @@
 
 - set formatter, save action and code cleanup settings:
 
-
     $ mvn com.outbrain:codecleaner-maven-plugin:style
 
     $ mvn com.outbrain:codecleaner-maven-plugin:compiler
