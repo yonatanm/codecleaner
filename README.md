@@ -18,6 +18,7 @@
 #### in your main pom.xm file add:
 
     <plugins>
+      ....
       <plugin>
         <groupId>com.outbrain</groupId>
         <artifactId>codecleaner-maven-plugin</artifactId>
@@ -34,14 +35,17 @@
         </configuration>
       </plugin>
         ....
-    </plugins>    
+    </plugins>
 
 #### and run
 
+- set formatter, save action and code cleanup settings run:
     $ mvn com.outbrain:codecleaner-maven-plugin:style
 
+- set compiler error/warning level:
     $ mvn com.outbrain:codecleaner-maven-plugin:compiler
 
+- set general/JSP/XML/XSD/HTML validation:
     $ mvn com.outbrain:codecleaner-maven-plugin:validation
 
 
