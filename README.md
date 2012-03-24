@@ -17,31 +17,32 @@
 
 #### in your main pom.xm file add:
 
-  <plugins>
-    <plugin>
-      <groupId>com.outbrain</groupId>
-      <artifactId>codecleaner-maven-plugin</artifactId>
-      <version>1.0.2</version>
-      <configuration>
-        <corePrefsFile>devtools/eclipse/settings/org.eclipse.jdt.core.prefs</corePrefsFile>
-        <uiPrefsFile>devtools/eclipse/settings/org.eclipse.jdt.ui.prefs</uiPrefsFile>
-        <validationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.validation.prefs</validationPrefsFile>
-        <htmlValidationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.html.core.prefs</htmlValidationPrefsFile>
-        <jspValidationPrefsFile>devtools/eclipse/settings/org.eclipse.jst.jsp.core.prefs</jspValidationPrefsFile>
-        <findbugsFile>devtools/eclipse/settings/.fbprefs</findbugsFile>
-        <pmdFileName>devtools/eclipse/settings/.pmd</pmdFileName>
-        <pmdRuleFileName>devtools/eclipse/settings/.ruleset</pmdRuleFileName>
-      </configuration>
-    </plugin>
-      ....
-  </plugins>    
+    <plugins>
+      <plugin>
+        <groupId>com.outbrain</groupId>
+        <artifactId>codecleaner-maven-plugin</artifactId>
+        <version>1.0.2</version>
+        <configuration>
+          <corePrefsFile>devtools/eclipse/settings/org.eclipse.jdt.core.prefs</corePrefsFile>
+          <uiPrefsFile>devtools/eclipse/settings/org.eclipse.jdt.ui.prefs</uiPrefsFile>
+          <validationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.validation.prefs</validationPrefsFile>
+          <htmlValidationPrefsFile>devtools/eclipse/settings/org.eclipse.wst.html.core.prefs</htmlValidationPrefsFile>
+          <jspValidationPrefsFile>devtools/eclipse/settings/org.eclipse.jst.jsp.core.prefs</jspValidationPrefsFile>
+          <findbugsFile>devtools/eclipse/settings/.fbprefs</findbugsFile>
+          <pmdFileName>devtools/eclipse/settings/.pmd</pmdFileName>
+          <pmdRuleFileName>devtools/eclipse/settings/.ruleset</pmdRuleFileName>
+        </configuration>
+      </plugin>
+        ....
+    </plugins>    
 
 #### and run
-  $ mvn com.outbrain:codecleaner-maven-plugin:style
 
-  $ mvn com.outbrain:codecleaner-maven-plugin:compiler
+    $ mvn com.outbrain:codecleaner-maven-plugin:style
 
-  $ mvn com.outbrain:codecleaner-maven-plugin:validation
+    $ mvn com.outbrain:codecleaner-maven-plugin:compiler
+
+    $ mvn com.outbrain:codecleaner-maven-plugin:validation
 
 
 under devtools/eclipse/settings/ put the eclipse settings file (as taken frm one of your well-configured-project)
